@@ -6,5 +6,4 @@ export const colors = {
     text: '#9c4747ff',
     textSecondary: '#3868aaff',
     disabled: '#1a3d6eff',
-
 };
