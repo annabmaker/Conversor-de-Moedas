@@ -1,26 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
-import { KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View, Platform, ScrollView, Input, } from 'react-native';
 import { Button } from './src/components/Button';
-import { styles} from './App.styles'
+import { styles } from './App.styles';
+import { currencies } from './src/constants/currencies'
 
 export default function App() {
   return (
-    <KeyboardAvoidingView>
-    <View>
-     
-      <StatusBar style="light" />
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
+      <ScrollView style={styles.scrollView}>
 
-      <View>
-        <Text> Conversor de Moedas</Text>
-        <Text> Converta valores entre diferentes moedas</Text>
-      </View>
-      
-      <View>
-        <Text> De:</Text>
-        <Button variant= 'primary'></Button>
-      </View>
-    </View>
+        <View style={styles.content}>
+
+          <StatusBar style="light" />
+
+          <View style={styles.header}>
+            <Text style={styles.title}> Conversor de Moedas</Text>
+            <Text style={styles.subTitle}> Converta valores entre diferentes moedas</Text>
+          </View>
+
+          <View style={styles.card}>
+            <Text style={styles.label}> De:</Text>
+            <View style>
+              {currencies.map(currency => (
+                <Button variant='primary'
+                  key={currency.code}
+                  currency={currency}
+                >
+
+                </Button>
+              ))}
+
+              <Input />
+
+            </View>
+
+          </View>
+
+
+
+        </View>
+      </ScrollView>
     </KeyboardAvoidingView>
-  )};
+  )
+};
 
-  //PAREI EM 51:26 PORÉM ESTA DANDO ERRO, FAZER NOVAMENTE ALGUNS MINUTOS.
+//paramos em 1 hora e 10 minutos e 43 segundos

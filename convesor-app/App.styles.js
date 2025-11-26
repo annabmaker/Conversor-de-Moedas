@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
         color: colors.text,
         marginBottom: 8
     },
-    subtitle: {
+    subTitle: {
         color: colors.textSecondary,
         fontSize: 16
     },
@@ -40,5 +40,13 @@ export const styles = StyleSheet.create({
         color: colors.textSecondary,
         marginBottom: 8,
         fontSize: 14
+    },
+    currencyGrid: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        marginHorizontal: -4,
+        marginBottom: 12,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })

@@ -1,6 +1,6 @@
 import {StyleSheet } from "react-native";
 import { colors } from '../../styles/colors'
-import { styles} from './App.styles'
+
 export const styles = StyleSheet.create({
     button: {
         backgroundColor: colors.inputBackground,
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     buttonPrimary : {
         backgroundColor: colors.primary
     },
-    buttonSecudary: {
+    buttonSecondary: {
         backgroundColor: colors.secondary
     }
 })
